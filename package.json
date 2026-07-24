@@ -9,7 +9,7 @@
     "dev": "node ./node_modules/concurrently/dist/bin/concurrently.js -k -n TSC,SERVER -c blue,green \"node ./node_modules/typescript/bin/tsc --watch --preserveWatchOutput\" \"node --watch --enable-source-maps dist/index.js\"",
     "build": "node ./node_modules/typescript/bin/tsc",
     "start": "node dist/index.js",
-    "typecheck": "node ./node_modules/typescript/bin/tsc --noEmit"
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "axios": "^1.18.1",
@@ -20,7 +20,8 @@
     "helmet": "^7.1.0",
     "morgan": "^1.10.0",
     "nodemailer": "^9.0.3",
-    "zod": "^3.24.2"
+    "zod": "^3.24.2",
+    "typescript": "^5.9.3"
   },
   "devDependencies": {
     "@types/cors": "^2.8.17",
@@ -28,7 +29,7 @@
     "@types/morgan": "^1.9.9",
     "@types/node": "^22.16.5",
     "@types/nodemailer": "^6.4.16",
-    "concurrently": "^9.1.0",
-    "typescript": "^5.9.3"
+    "concurrently": "^9.1.0"
+    
   }
 }
